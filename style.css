@@ -1,70 +1,103 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Fuente más moderna */
     margin: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa; /* Color de fondo más suave */
+    color: #343a40; /* Color de texto principal */
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 header {
-    background-color: #333;
+    background-color: #343a40; /* Color de encabezado oscuro */
     color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
+    position: relative; /* Para posicionar el logo */
+    z-index: 1; /* Para que esté encima del efecto de fondo */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)); /* Efecto degradado sutil */
+    z-index: -1; /* Detrás del contenido del header */
 }
 
 nav a {
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave para el color del enlace */
 }
 
+nav a:hover {
+    color: #adb5bd; /* Color del enlace al pasar el ratón */
+}
+
+
 .section {
-    padding: 40px 0;
+    padding: 60px 0;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 h1, h2, h3 {
-    color: #333;
+    color: #343a40;
+    font-weight: 600; /* Peso del texto más fuerte */
 }
 
 .skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
 }
 
 ul {
     list-style-type: disc;
-    margin-left: 20px;
+    margin-left: 30px;
+    padding-left: 0; /* Elimina el espacio interno */
+}
+
+.skill-item {
+  padding: 10px;
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.skill-item:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Agregar sombra al hover */
 }
 
 footer {
-    background-color: #333;
+    background-color: #343a40;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
-/* Responsive styles */
+/* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
     }
     .skill-grid {
-        grid-template-columns: 1fr; /* Stack skills vertically on smaller screens */
-    }
-
-    .skill-item:hover {
-        background-color: #f0f0f0; /* Color de resaltado al pasar el ratón */
-        transform: scale(1.05); /* Efecto de aumento sutil */
-        transition: all 0.3s ease; /* Transición suave */
+        grid-template-columns: 1fr;
     }
 }
+
+/* Agrega una fuente personalizada (opcional, necesita incluir la fuente en el header) */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap'); */
