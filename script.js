@@ -13,8 +13,31 @@ document.querySelectorAll('nav a').forEach(anchor => {
 });
 
 
-// Resaltar habilidades al pasar el ratón
+// Resaltar habilidades al pasar el ratón (necesitas definir el CSS para esto)
 const skillItems = document.querySelectorAll('.skill-grid li');
 skillItems.forEach(item => {
-    item.classList.add('skill-item'); //Añade la clase para el efecto hover
+    item.addEventListener('mouseover', () => {
+        item.classList.add('skill-item-hover'); // Clase CSS para el efecto hover
+    });
+    item.addEventListener('mouseout', () => {
+        item.classList.remove('skill-item-hover');
+    });
+});
+
+
+// Botón de Instagram con transición de degradado
+const instagramButton = document.querySelector('.instagram-button');
+const gradient1 = 'linear-gradient(to right, #fccc63, #fbad50, #cd486b, #4c68d7)';
+const gradient2 = 'linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff)';
+instagramButton.dataset.text = instagramButton.querySelector('span').textContent;
+
+
+instagramButton.addEventListener('mouseover', () => {
+  gsap.to(instagramButton, { duration: 0.3, backgroundImage: gradient2 });
+  gsap.to(instagramButton.querySelector('::before'), { duration: 0.3, backgroundImage: gradient1 });
+});
+
+instagramButton.addEventListener('mouseout', () => {
+  gsap.to(instagramButton, { duration: 0.3, backgroundImage: gradient1 });
+  gsap.to(instagramButton.querySelector('::before'), { duration: 0.3, backgroundImage: gradient2 });
 });

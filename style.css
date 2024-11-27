@@ -105,7 +105,62 @@ footer {
     background: linear-gradient(to bottom, #5943A9, #4267B2); /* Degradado similar al header */
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
+    /* height: 100px; */
+    border-top-left-radius: 100px;
+    margin-top: 100px;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px dashed black; */
+}
+
+.row-footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 2px dashed blue; */
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    /* border: 1px solid green; */
+}
+
+.title-about-me, .title-links-redes-sociales {
+    font-size: 22px;
+    color: white;
+    text-shadow: 5px 5px 5px rgb(25, 0, 53);
+}
+
+.logotipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.links-redes-sociales {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+.logos-redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    /* border: 1px solid green; */
 }
 
 @media (max-width: 768px) {
@@ -119,8 +174,6 @@ footer {
 
 /* Agrega la fuente Roboto (opcional - necesitas incluir la fuente en el header) */
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap'); */
-
-/* ... (código CSS anterior) ... */
 
 .profile-picture {
     width: 200px;
@@ -178,19 +231,58 @@ footer {
 }
 
 /*Botón de Instagram*/
+:root {
+    --main-gradient: linear-gradient(to right, #fccc63, #fbad50, #cd486b, #4c68d7);
+    --hover-color: #ffffff;
+}
+
 .instagram-button {
-    background-color: #4267B2;
+    display: inline-block; /* Asegurarse de que sea un bloque en línea */
+    background-image: var(--main-gradient);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none; /* Remover subrayado */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones para fondo y color */
+    margin-top: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.instagram-button span {
+    position: relative;
+    z-index: 1; /* Mantener el texto encima */
+}
+
+.instagram-button::after { /* Texto con degradado al pasar el cursor */
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: var(--main-gradient);
+    color: black; /* Ocultar texto inicialmente */
+    z-index: 2; /* Sobre el texto original */
+    text-align: center;
+    line-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0; /* Oculto inicialmente */
+    transition: opacity 0.3s ease;
 }
 
 .instagram-button:hover {
-    background-color: #32508C;
+    background-color: var(--hover-color); /* Fondo blanco al pasar el cursor */
+    color: transparent; /* Ocultar texto original */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-button:hover::after {
+    opacity: 1; /* Mostrar texto con degradado al pasar el cursor */
 }
