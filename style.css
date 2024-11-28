@@ -32,9 +32,17 @@ header::before {
     z-index: -1;
 }
 
-.nombre{
-    text-align: center; /* Centra el texto horizontalmente */
-    color: #ffffff;
+.containerletras {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nombre {
+    color: #008cff;
+    text-align: center;
+    font-size: 40px; /* Aumentado a 70px */
+    text-shadow: 5px 5px 5px rgb(25, 0, 53);
 }
 
 nav a {
@@ -169,6 +177,15 @@ footer {
     }
     .skill-grid {
         flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+    }
+    .nombre {
+        font-size: 30px; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+    h1, h2, h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 15;
     }
 }
 
