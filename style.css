@@ -41,7 +41,7 @@ header::before {
 .nombre {
     color: #008cff;
     text-align: center;
-    font-size: 40px; /* Aumentado a 70px */
+    font-size: 40px; /* Aumentado a 40px */
     text-shadow: 5px 5px 5px rgb(25, 0, 53);
 }
 
