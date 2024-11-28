@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif; /* Fuente moderna */
     margin: 0;
@@ -41,7 +42,7 @@ header::before {
 .nombre {
     color: #008cff;
     text-align: center;
-    font-size: 40px; /* Aumentado a 40px */
+    font-size: 40px; /* Tamaño original */
     text-shadow: 5px 5px 5px rgb(25, 0, 53);
 }
 
@@ -171,21 +172,135 @@ footer {
     /* border: 1px solid green; */
 }
 
-@media (max-width: 768px) {
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
     .container {
-        padding: 10px;
-    }
-    .skill-grid {
-        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+        padding: 15px; /* Reduce el padding en pantallas medianas */
     }
     .nombre {
-        font-size: 30px; /* Tamaño más pequeño en pantallas pequeñas */
+        font-size: 32px; /* Ajuste de tamaño para pantallas medianas */
     }
-    h1, h2, h3 {
-        font-size: 20px;
+    h1 {
+        font-size: 24px; /* Ajuste de tamaño para pantallas medianas */
     }
-    p {
-        font-size: 15;
+    h2 {
+        font-size: 20px; /* Ajuste de tamaño para pantallas medianas */
+    }
+    h3 {
+        font-size: 18px; /* Ajuste de tamaño para pantallas medianas */
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+    .nombre {
+        font-size: 28px; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+    h1 {
+        font-size: 22px; /* Ajuste para pantallas pequeñas */
+    }
+    h2 {
+        font-size: 18px; /* Ajuste para pantallas pequeñas */
+    }
+    h3 {
+        font-size: 16px; /* Ajuste para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Asegura que el padding sea aún más pequeño en pantallas muy pequeñas */
+    }
+    .nombre {
+        font-size: 24px; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+    h1 {
+        font-size: 20px; /* Ajuste para pantallas muy pequeñas */
+    }
+    h2 {
+        font-size: 16px; /* Ajuste para pantallas muy pequeñas */
+    }
+    h3 {
+        font-size: 14px; /* Ajuste para pantallas muy pequeñas */
+    }
+    .skill-grid {
+        flex-direction: column; /* Apila los elementos verticalmente */
+    }
+}
+
+@media (max-width: 576px) {
+    .nombre {
+        font-size: 20px; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+    h1 {
+        font-size: 18px; /* Ajuste para pantallas muy pequeñas */
+    }
+    h2 {
+        font-size: 14px; /* Ajuste para pantallas muy pequeñas */
+    }
+    h3 {
+        font-size: 12px; /* Ajuste para pantallas muy pequeñas */
+    }
+    .skill-item {
+        max-width: 100%; /* Asegura que los elementos ocupen el 100% en pantallas pequeñas */
+    }
+    .education-item {
+        width: 100%; /* Asegura que los elementos de educación ocupen el 100% */
+    }
+}
+
+/* Otras secciones como footer, etc. */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0; /* Reduce el padding del footer en pantallas pequeñas */
+        margin-top: 50px; /* Reduce el margen superior en pantallas pequeñas */
+    }
+    .container-footer {
+        flex-direction: column; /* Cambia la dirección a columna para mejor visualización */
+    }
+    .row-footer-info {
+        flex-direction: column; /* Apila los elementos en el footer verticalmente */
+        align-items: center; /* Centra los elementos en el footer */
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 10px 0; /* Asegura que el padding sea aún más pequeño en pantallas muy pequeñas */
+        margin-top: 30px; /* Reduce aún más el margen superior en pantallas muy pequeñas */
+    }
+    .title-about-me {
+        font-size: 80%; /* Escala el tamaño del texto en pantallas pequeñas */
+    }
+    .title-links-redes-sociales {
+        font-size: 80%; /* Escala el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+/* Media Queries para el Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0; /* Reduce el padding del footer en pantallas pequeñas */
+    }
+    .title-about-me {
+        font-size: 90%; /* Escala a 90% del tamaño original */
+    }
+    .title-links-redes-sociales {
+        font-size: 90%; /* Escala a 90% del tamaño original */
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 10px 0; /* Asegura que el padding sea aún más pequeño en pantallas muy pequeñas */
+    }
+    .title-about-me {
+        font-size: 80%; /* Escala a 80% del tamaño original */
+    }
+    .title-links-redes-sociales {
+        font-size: 80%; /* Escala a 80% del tamaño original */
     }
 }
 
