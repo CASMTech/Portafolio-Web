@@ -3,9 +3,29 @@ body {
     font-family: 'Roboto', sans-serif; /* Fuente moderna */
     margin: 0;
     line-height: 1.6;
-    background-color: #f0f2f5; /* Fondo gris claro */
+    background-image: url('Imagenes/technology-digital-wave-background-concept-beautiful-motion-waving-dots-texture-with-glowing-defocused-particles-technology-background-free-vector.jpg'); /* Cambia esta ruta a la ubicación de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo al viewport */
     color: #333;
     overflow-x: hidden;
+    padding-top: 60px; /* Ajusta el padding superior según la altura de la navegación fija */
+}
+
+.fixed-nav {
+    position: fixed; /* Mantiene la navegación fija */
+    top: 0; /* En la parte superior de la pantalla */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: rgb(100, 100, 100); /* Fondo blanco para la navegación */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de profundidad */
+    padding: 10px 0; /* Espaciado interno */
+    text-align: center; /* Centra los enlaces de navegación */
+    background: linear-gradient(to bottom, #4267B2, #5943A9); /* Degradado azul y morado */
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -13,6 +33,8 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
+
 
 header {
     background: linear-gradient(to bottom, #4267B2, #5943A9); /* Degradado azul y morado */
@@ -60,10 +82,10 @@ nav a:hover {
 
 .section {
     padding: 60px 0;
-    background-color: #fff;
+    background-color: #f0f2f5;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 h1, h2, h3 {
